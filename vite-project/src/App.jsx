@@ -1,12 +1,15 @@
-import './App.css'
-import NavBar from './componentes/NavBar'
+import NavBar from './components/NavBar';
+import ItemListContainer from './components/ItemListContainer';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-function App() {
+const App = () => {
   return (
-    <>
-      <NavBar/>
-    </>
-  )
-}
+    <div className="App">
+      <NavBar />
+      <ItemListContainer greeting="¡Bienvenido a MiTienda!" />
+    </div>
+  );
+};
 
-export default App
+export default App;
+

@@ -1,21 +1,23 @@
-//import React from 'react';
+import { NavLink } from 'react-router-dom';
 import CartWidget from './CartWidget';
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 const NavBar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
-      <a className="navbar-brand" href="#">MiTienda</a>
-      <div className="collapse navbar-collapse" id="navbarNav">
-        <ul className="navbar-nav">
+      <NavLink className="navbar-brand" to="/">MiTienda</NavLink>
+      <div className="collapse navbar-collapse">
+        <ul className="navbar-nav mr-auto">
           <li className="nav-item">
-            <a className="nav-link" href="#">Categoría 1</a>
+            <NavLink className="nav-link" to="/category/ropaWomen">Ropa para Mujeres</NavLink>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">Categoría 2</a>
+            <NavLink className="nav-link" to="/category/ropaMen">Ropa para Hombres</NavLink>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">Categoría 3</a>
+            <NavLink className="nav-link" to="/category/accesorios">Accesorios</NavLink>
+          </li>
+          <li className="nav-item">
+            <NavLink className="nav-link" to="/category/electronica">Electrónica</NavLink>
           </li>
         </ul>
       </div>
